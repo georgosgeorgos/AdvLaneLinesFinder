@@ -91,4 +91,4 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 #### problems and improvement
 
-My implementation is not sophisticated: there is no outliers' detection or some particular check for maximal difference between lines in sequential frames.   
+My implementation is not sophisticated: there is a simple outliers' detection and no particular check for maximal difference between lines in sequential frames.   
