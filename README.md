@@ -15,13 +15,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+[image0]: ./output_images/pipeline/Cal_Original "Cal_Original"
+[image00]: ./output_images/pipeline/Cal_Undistorted "Cal_Undistorted"
 [image1]: ./output_images/pipeline/Undistorted "Undistorted"
 [image2]: ./output_images/pipeline/Warped "Warped"
 [image3]: ./output_images/pipeline/Combined "Combined"
 [image4]: ./output_images/pipeline/lines_win "windows"
 [image5]: ./output_images/pipeline/lines_win_fit.jpg "windows fit"
 [image6]: ./output_images/pipeline/Original "Original"
-[image7]: ./output_images/test/test6.jpg "Original"
+[image7]: ./output_images/test/test4.jpg "Original"
 
 
 ---
@@ -29,6 +31,9 @@ The goals / steps of this project are the following:
 ### Camera Calibration
 
 Using `cv2.findChessboardCorners`, `cv2.calibrateCamera`, `cv2.undistort` I calibrated the camera to obtain undistorted images.
+
+![alt text][image0] ![alt text][image00]
+
 The next image shows an example of undistorted image and the area of interest.
 
 ![alt text][image1]
@@ -50,7 +55,7 @@ The perspective transform return an image where we can easily measure distances.
 
 #### 2. Gradient and Color thresholding
 
-I used a combination of color and gradient thresholds to generate a binary image. In particular I decided to combine `cv2.Sobel` in the x direction and `cv2.cvtColor` to extract the S-Channel in the HLS color space. 
+I used a combination of color and gradient thresholds to generate a binary image. In particular I decided to combine `cv2.Sobel` in the x direction and `cv2.cvtColor` to extract the S-Channel in the HLS color space and the L-Channel in the LAB color space. 
 
 ![alt text][image3]
 
